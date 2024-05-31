@@ -1,0 +1,84 @@
+.shopTitle {
+  margin: 30px 25px 0 25px;
+  padding: 0 0 15px 0;
+  border-bottom: 2px solid;
+  font-size: 45px;
+  font-family: "Yandex Sans Display Bold";
+  text-align: center;
+}
+
+.card {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 50px 25px;
+  padding: 0;
+  width: 350px;
+  //   height: 650px;
+  //   background-color: #fff;
+  -webkit-box-shadow: 0px 10px 14px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 14px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 14px -4px rgba(0, 0, 0, 0.75);
+
+  .textWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 0 10px;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 25px;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: "Yandex Sans Display Bold";
+    }
+  }
+}
+
+.cardImage {
+  margin: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 350px;
+  height: 350px;
+}
+
+p {
+  margin: 8px 8px 0 8px;
+  padding: 0;
+  font-family: "Yandex Sans Text";
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: #fff;
+  color: #111;
+  font-family: "Yandex Sans Text";
+  -webkit-box-shadow: -3px 17px 12px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -3px 17px 16px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: -3px 17px 16px -10px rgba(0, 0, 0, 0.75);
+  transition: all 1s;
+  border-radius: 4px;
+  margin: 15px 0 10px 8px;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: #19ab4a;
+    color: #fff;
+  }
+
+  a {
+    all: unset;
+    font-family: "Yandex Sans Display Bold";
+
+    // &:hover {
+    //   transition: opacity 1s;
+    //   opacity: 0.2;
+    // }
+  }
+}

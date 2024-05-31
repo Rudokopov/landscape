@@ -1,0 +1,50 @@
+.footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  margin: 0;
+  padding: 0;
+  font-size: 8px;
+  color: #45484b;
+  align-self: flex-end;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: all 1s ease;
+}
+
+.footer-icons a:hover {
+  color: #19ab4a;
+}
+
+.scroll-up {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.scroll-up:hover {
+  color: #fff;
+}

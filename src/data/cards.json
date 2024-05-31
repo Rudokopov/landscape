@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "image": "https://valles.ru/upload/iblock/52a/52a768711d9779600eadd181debdb6ee.jpg",
+    "title": "Кактус",
+    "price": 999,
+    "description": "Замечательное растение скорее покупай растет где то ну и в принципе пойдует этот текст вообще для тест фыдшвофылвфыовфдлфыво"
+  },
+  {
+    "id": 2,
+    "image": "https://baucenter.ru/upload/pictures/93/939000583-0.jpg",
+    "title": "Фотиния",
+    "price": 2300,
+    "description": "Замечательное растение скорее покупай"
+  },
+  {
+    "id": 3,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01rZ9nSzXBmNGB2V4ssocJ0ThnwISzsruHA&s",
+    "title": "Олеандр",
+    "price": 1700,
+    "description": "Замечательное растение скорее покупай"
+  },
+  {
+    "id": 4,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/5_Tulpen_in_der_Mittagssonne.JPG/1200px-5_Tulpen_in_der_Mittagssonne.JPG",
+    "title": "Тюльпан",
+    "price": 1500,
+    "description": "Замечательное растение скорее покупай"
+  },
+  {
+    "id": 5,
+    "image": "https://nsk-g13.edusite.ru/images/p48_berezapovislaya.jpg",
+    "title": "Берёза",
+    "price": 3000,
+    "description": "Замечательное растение скорее покупай"
+  },
+  {
+    "id": 6,
+    "image": "https://ir.ozone.ru/s3/multimedia-c/c1000/6382691928.jpg",
+    "title": "Глациния",
+    "price": 1000,
+    "description": "Замечательное растение скорее покупай"
+  },
+  {
+    "id": 7,
+    "image": "https://rg.ru/uploads/images/184/23/80/1137049268.png",
+    "title": "Сакура",
+    "price": 200,
+    "description": "Замечательное растение скорее покупай"
+  },
+  {
+    "id": 8,
+    "image": "https://www.uzhniy.ru/upload/webp/resize_cache/3d3/wxdqkww1irhbqrayya5082ilg13id1je/370_0_1/0d1b45d5_337b_11e0_8a4d_001f16319b77_1.webp",
+    "title": "Вишня",
+    "price": 2200,
+    "description": "Замечательное растение скорее покупай"
+  },
+  {
+    "id": 9,
+    "image": "https://altaikedr.ru/uploads/images/widget/original/b013da27e1125596678c87c7750b7d5bca54d76e.jpg",
+    "title": "Кореандр",
+    "price": 2200,
+    "description": "Замечательное растение скорее покупай"
+  }
+]

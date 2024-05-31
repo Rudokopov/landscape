@@ -1,0 +1,41 @@
+.shop-title {
+  margin: 30px 25px 0 25px;
+  padding: 0 0 15px 0;
+  border-bottom: 2px solid;
+  font-size: 45px;
+  font-family: "Yandex Sans Display Bold";
+  text-align: center;
+}
+
+.shop-secondTitle {
+  margin: 10px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.shop-container {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #19ab4a;
+  color: white;
+}

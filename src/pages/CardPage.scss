@@ -1,0 +1,44 @@
+.Card {
+  // max-width: 900px;
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  flex-wrap: wrap;
+
+  .card-back-button {
+    all: unset;
+  }
+
+  img {
+    margin-right: 50px;
+    max-width: 450px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  h2 {
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  h3 {
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  p {
+    margin: 0 0 15px 0;
+    padding: 0;
+    max-width: 300px;
+  }
+
+  .card-container {
+    align-self: center;
+  }
+
+  .card-cart-button {
+    margin-right: 25px;
+  }
+}
