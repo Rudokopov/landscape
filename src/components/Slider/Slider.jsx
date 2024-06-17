@@ -1,11 +1,21 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./Slider.css";
+
+import image1 from "../../images/IMG_2090.jpeg";
+import image2 from "../../images/IMG_2094.jpeg";
+import image3 from "../../images/IMG_2098.jpeg";
 
 export default function Slider() {
   return (
@@ -22,25 +32,13 @@ export default function Slider() {
         className="image-slider"
       >
         <SwiperSlide className="slide">
-          <img
-            className="slide-image"
-            src="https://nevagreen.ru/upload/image/screenshot_1_(1).png"
-            alt="Промоушн"
-          />
+          <img className="slide-image" src={image1} alt="Промоушн" />
         </SwiperSlide>
         <SwiperSlide className="slide">
-          <img
-            className="slide-image"
-            src="https://www.drevo-spas.ru/img/work/article/a_516_3065.jpg"
-            alt="Доставка"
-          />
+          <img className="slide-image" src={image2} alt="Доставка" />
         </SwiperSlide>
         <SwiperSlide className="slide">
-          <img
-            className="slide-image"
-            src="https://s0.rbk.ru/v6_top_pics/media/img/6/01/346841313133016.jpg"
-            alt="Реклама"
-          />
+          <img className="slide-image" src={image3} alt="Реклама" />
         </SwiperSlide>
       </Swiper>
     </div>

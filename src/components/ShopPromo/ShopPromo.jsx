@@ -1,4 +1,5 @@
 import Card from "../Card/Card";
+import PromoBoard from "../PromoBoard/PromoBoard";
 import "./ShopPromo.scss";
 import { Link } from "react-router-dom";
 
@@ -11,6 +12,10 @@ function ShopPromo(props) {
   return (
     <div className="ShopPromo">
       <h2>Магазин</h2>
+
+      <div className="ShopPromo__sale">
+        <PromoBoard />
+      </div>
       <div className="cardContainer">
         {currentItems.map((item, index) => (
           <Card

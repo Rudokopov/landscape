@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Card from "../components/Card/Card";
 import { CartContext } from "../contexts/CartContext";
 import "./Shop.scss";
@@ -11,6 +11,10 @@ function Shop(props) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   const handleClick = (pageNumber) => {
     setCurrentPage(pageNumber);

@@ -1,0 +1,33 @@
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  &__content {
+    position: relative;
+    background: transparent;
+  }
+
+  &__close {
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__image {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+}

@@ -1,0 +1,70 @@
+.greeningPage {
+  padding: 30px 20px 0 20px;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__description {
+    margin: 30px 0;
+    padding: 0;
+    // text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &__images {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-bottom: 50px;
+  }
+
+  &__gallery {
+    margin-top: 20px;
+
+    h2 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}
+
+.greeningPage__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &-item {
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-title {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+  }
+
+  &-description {
+    margin: 0;
+    padding: 0;
+    max-width: 800px;
+    font-size: 18px;
+  }
+}
+
+.bold-mark {
+  font-weight: bold;
+}

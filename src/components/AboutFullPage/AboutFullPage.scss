@@ -1,0 +1,50 @@
+.about-full-page {
+  padding: 20px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  &__gallery {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 650px;
+      margin: 10px;
+    }
+  }
+
+  &__videos {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    &__video {
+      margin-bottom: 20px;
+    }
+  }
+}

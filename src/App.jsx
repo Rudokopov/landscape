@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ScrollToTop from "./utils/scroll-top";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./vendor/font/stylesheet.css";
@@ -12,6 +13,8 @@ import Cart from "./pages/Cart";
 import jsonData from "./data/cards.json";
 import { CartContextProvider } from "./contexts/CartContext";
 import { TotalPriceProvider } from "./contexts/TotalPriceContext";
+import AboutFullPage from "./components/AboutFullPage/AboutFullPage";
+import GreeningPage from "./pages/GreeningPage";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -29,14 +32,15 @@ function App() {
 
   return (
     <div className="App">
-      <CartContextProvider value={{ cartItems, setCartItems }}>
-        <TotalPriceProvider>
-          <header>
-            <Header />
-          </header>
-          <Routes>
-            <Route path="/" element={<Home data={jsonData} />} />
-            {/* <Route
+      <ScrollToTop>
+        <CartContextProvider value={{ cartItems, setCartItems }}>
+          <TotalPriceProvider>
+            <header>
+              <Header />
+            </header>
+            <Routes>
+              <Route path="/" element={<Home data={jsonData} />} />
+              {/* <Route
               path="/card"
               element={
                 <CardPage
@@ -47,17 +51,22 @@ function App() {
                 />
               }
             /> */}
-            <Route path="/shop" element={<Shop data={jsonData} />} />
-            <Route
-              path="/cart"
-              element={<Cart setCartItems={setCartItems} />}
-            />
-          </Routes>
-          <footer>
-            <Footer />
-          </footer>
-        </TotalPriceProvider>
-      </CartContextProvider>
+              <Route
+                path="/about-full-page/greening"
+                element={<GreeningPage />}
+              />
+              <Route path="/shop" element={<Shop data={jsonData} />} />
+              <Route
+                path="/cart"
+                element={<Cart setCartItems={setCartItems} />}
+              />
+            </Routes>
+            <footer>
+              <Footer />
+            </footer>
+          </TotalPriceProvider>
+        </CartContextProvider>
+      </ScrollToTop>
     </div>
   );
 }
