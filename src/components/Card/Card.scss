@@ -37,6 +37,10 @@
       font-family: "Yandex Sans Display Bold";
     }
   }
+
+  &__link {
+    all: unset;
+  }
 }
 
 .cardImage {

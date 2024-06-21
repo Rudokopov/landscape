@@ -20,7 +20,7 @@ function About() {
         </li>
         <li>
           <Link
-            to={`/about-full-page/landscaping`}
+            to={`/about-full-page/landscape`}
             className="about__full-width-block about__full-width-block-landscaping"
           >
             <div className="about__full-width-block-content">

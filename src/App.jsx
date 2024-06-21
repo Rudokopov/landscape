@@ -15,6 +15,7 @@ import { CartContextProvider } from "./contexts/CartContext";
 import { TotalPriceProvider } from "./contexts/TotalPriceContext";
 import AboutFullPage from "./components/AboutFullPage/AboutFullPage";
 import GreeningPage from "./pages/GreeningPage";
+import LandscapePage from "./pages/LandscapePage";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -40,20 +41,14 @@ function App() {
             </header>
             <Routes>
               <Route path="/" element={<Home data={jsonData} />} />
-              {/* <Route
-              path="/card"
-              element={
-                <CardPage
-                  name={name}
-                  image={image}
-                  description={description}
-                  price={price}
-                />
-              }
-            /> */}
+              <Route path="/card/:title" element={<CardPage />} />
               <Route
                 path="/about-full-page/greening"
                 element={<GreeningPage />}
+              />
+              <Route
+                path="/about-full-page/landscape"
+                element={<LandscapePage />}
               />
               <Route path="/shop" element={<Shop data={jsonData} />} />
               <Route
