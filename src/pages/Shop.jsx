@@ -12,10 +12,6 @@ function Shop(props) {
 
   const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   const handleClick = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -56,6 +52,10 @@ function Shop(props) {
     }
   };
 
+  const isInCart = (item) => {
+    return cartItems.some((cartItem) => cartItem.id === item.id);
+  };
+
   return (
     <div>
       <h2 className="shop-title">Магазин</h2>
@@ -71,6 +71,7 @@ function Shop(props) {
             price={item.price}
             description={item.description}
             onAddToCart={() => addToCart(item)}
+            isInCart={isInCart(item)}
           />
         ))}
       </div>

@@ -1,15 +1,16 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
 import "./Cart.scss";
 import { TotalPriceContext } from "../contexts/TotalPriceContext";
 import { Link } from "react-router-dom";
+import SubmitFormPopup from "../components/SubmitFormPopup/SubmitFormPopup";
 
-const Cart = ({ openSubmitFormPopup }) => {
+const Cart = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
   const { totalPrice, setTotalPrice } = useContext(TotalPriceContext);
+  const [isSubmitFormPopupOpen, setIsSubmitFormPopupOpen] = useState(false);
 
   useEffect(() => {
-    // Подсчитываем общую сумму всех товаров в корзине
     if (cartItems) {
       const total = cartItems.reduce(
         (accumulator, item) => accumulator + item.price * item.count,
@@ -25,11 +26,10 @@ const Cart = ({ openSubmitFormPopup }) => {
   if (!Array.isArray(cartItems) || cartItems.length === 0) {
     return (
       <div>
-        <h2 className="cart__title">Корзина</h2>
         <div className="cart__error-container">
           <p className="cart__error-text">Корзина пуста</p>
           <Link className="cart__error-link" to="/shop">
-            К покупкам
+            В магазин
           </Link>
         </div>
       </div>
@@ -53,6 +53,7 @@ const Cart = ({ openSubmitFormPopup }) => {
   };
 
   const decreaseCartItem = (item) => {
+    console.log(cartItems);
     if (!Array.isArray(cartItems)) {
       return;
     }
@@ -114,12 +115,16 @@ const Cart = ({ openSubmitFormPopup }) => {
         </p>
 
         <button
-          onClick={openSubmitFormPopup}
+          onClick={() => setIsSubmitFormPopupOpen(true)}
           className="cart__buttom-center-button"
         >
           Оформить заказ
         </button>
       </div>
+      <SubmitFormPopup
+        isOpen={isSubmitFormPopupOpen}
+        onClose={() => setIsSubmitFormPopupOpen(false)}
+      />
     </div>
   );
 };

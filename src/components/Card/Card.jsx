@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CardContext } from "../../contexts/CardContext";
 import "./Card.scss";
 
 function Card(props) {
   const { image, title, price, description, onAddToCart, isInCart } = props;
+  const { setSelectedCard } = useContext(CardContext);
 
   // Функция для обрезки описания
   const truncateDescription = (text, maxLength) => {
@@ -11,6 +13,17 @@ function Card(props) {
       return text.slice(0, maxLength) + "...";
     }
     return text;
+  };
+
+  const handleMoreInfo = () => {
+    setSelectedCard({
+      image,
+      title,
+      price,
+      description,
+      onAddToCart,
+      isInCart,
+    });
   };
 
   return (
@@ -24,14 +37,8 @@ function Card(props) {
       <button onClick={onAddToCart} disabled={isInCart}>
         {isInCart ? "Уже в корзине" : "В корзину"}
       </button>
-      <Link
-        className="card__link"
-        to={{
-          pathname: `/card/${title}`,
-          state: { image, title, price, description },
-        }}
-      >
-        <button>Подробнее</button>
+      <Link className="link" to={`/card/${title}`}>
+        <button onClick={handleMoreInfo}>Подробнее</button>
       </Link>
     </div>
   );

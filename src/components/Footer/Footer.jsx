@@ -9,7 +9,12 @@ function Footer() {
         <button className="scroll-up" onClick={() => window.scrollTo(0, 0)}>
           <FaArrowUp />
         </button>
-        <p className="footer-text">Made by Rudokopov</p>
+        <p className="footer-text">
+          Остались вопросы?{" "}
+          <a className="link" href="tel:+1234567890">
+            +7 (964) 948-59-84
+          </a>
+        </p>
         <div className="footer-icons">
           <a
             href="https://telegram.me/yourusername"

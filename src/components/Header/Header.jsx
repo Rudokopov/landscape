@@ -5,6 +5,7 @@ import "./Header.scss";
 function Header() {
   const location = useLocation();
   const [active, setActive] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     switch (location.pathname) {
@@ -26,15 +27,41 @@ function Header() {
     }
   }, [location]);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const handleLinkClick = (page) => {
+    setActive(page);
+    closeMenu();
+  };
+
   return (
     <div className="header">
       <h1>Ландшафтное бюро</h1>
-      <a className="phone" href="tel:+1234567890">
-        <span>+7(964)-948-59-84</span>
+      <a className={`phone ${isOpen ? "open" : ""}`} href="tel:+1234567890">
+        +7(964)-948-59-84
       </a>
-      <ul>
+      <div
+        className={`menu-toggle ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div className="menu-toggle__line"></div>
+        <div className="menu-toggle__line"></div>
+        <div className="menu-toggle__line"></div>
+      </div>
+      <ul className={`menu ${isOpen ? "open" : ""}`}>
         <li className={active === "Главная" ? "active" : ""}>
-          <Link className="link" to="/" onClick={() => setActive("Главная")}>
+          <Link
+            className="link"
+            to="/"
+            onMouseDown={() => handleLinkClick("Главная")}
+            onClick={closeMenu}
+          >
             Главная
           </Link>
         </li>
@@ -42,7 +69,8 @@ function Header() {
           <Link
             className="link"
             to="/shop"
-            onClick={() => setActive("Магазин")}
+            onMouseDown={() => handleLinkClick("Магазин")}
+            onClick={closeMenu}
           >
             Магазин
           </Link>
@@ -51,7 +79,8 @@ function Header() {
           <Link
             className="link"
             to="/service"
-            onClick={() => setActive("Услуги")}
+            onMouseDown={() => handleLinkClick("Услуги")}
+            onClick={closeMenu}
           >
             Услуги
           </Link>
@@ -60,12 +89,14 @@ function Header() {
           <Link
             className="link"
             to="/cart"
-            onClick={() => setActive("Корзина")}
+            onMouseDown={() => handleLinkClick("Корзина")}
+            onClick={closeMenu}
           >
             Корзина
           </Link>
         </li>
       </ul>
+      {isOpen && <div className="backdrop" onClick={closeMenu}></div>}
     </div>
   );
 }

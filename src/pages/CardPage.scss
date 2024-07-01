@@ -1,44 +1,99 @@
 .Card {
-  // max-width: 900px;
+  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: #000;
+  background-color: #fff;
+}
+
+.card__title {
+  margin: 0 0 24px 0;
+  padding: 0;
+  font-size: 60px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 18px;
+  text-decoration: none;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+.card-container__info {
   display: flex;
   justify-content: center;
-  margin: 100px auto;
   flex-wrap: wrap;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  border-bottom: #000 solid;
+}
 
-  .card-back-button {
-    all: unset;
-  }
+.card-container__info img {
+  max-width: 866px;
+  max-height: 600px;
+  min-width: 320px;
+  margin-right: 20px;
+  object-fit: cover;
 
-  img {
-    margin-right: 50px;
-    max-width: 450px;
-    border-radius: 10px;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  }
+  border-radius: 10px;
+}
 
-  h2 {
-    margin: 0 0 15px 0;
-    padding: 0;
-  }
+.card-container__info p {
+  font-size: 25px;
+  line-height: 1.5;
+  max-width: 558px;
+}
 
-  h3 {
-    margin: 0 0 15px 0;
-    padding: 0;
-  }
+.card-container__examples {
+  padding-bottom: 40px;
+  border-bottom: #000 solid;
+}
 
-  p {
-    margin: 0 0 15px 0;
-    padding: 0;
-    max-width: 300px;
-  }
+.card-container__examples h2 {
+  margin: 36px 0 70px 0;
+  padding: 0;
+  font-size: 48px;
+}
+.card-container__examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
 
-  .card-container {
-    align-self: center;
-  }
+.card-container__examples-grid img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
 
-  .card-cart-button {
-    margin-right: 25px;
-  }
+.card-container__video {
+  margin-bottom: 40px;
+}
+
+.card-container__video h2 {
+  margin: 36px 0 70px 0;
+  padding: 0;
+  font-size: 48px;
+}
+
+.card-cart-button {
+  display: block;
+  padding: 20px 50px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 38px;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.card-cart-button:hover {
+  background-color: #333;
+}
+
+.card-container__video-container {
+  display: flex;
+  justify-content: center;
 }

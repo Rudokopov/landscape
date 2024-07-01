@@ -12,6 +12,10 @@ function ShopPromo(props) {
   const { cartItems, setCartItems } = useContext(CartContext);
   const currentItems = data.slice(0, ITEMS_PER_PAGE);
 
+  const isInCart = (item) => {
+    return cartItems.some((cartItem) => cartItem.id === item.id);
+  };
+
   const addToCart = (item) => {
     const itemExists = cartItems.find((cartItem) => cartItem.id === item.id);
 
@@ -44,13 +48,14 @@ function ShopPromo(props) {
             price={item.price}
             description={item.description}
             onAddToCart={() => addToCart(item)}
+            isInCart={isInCart(item)} // Передаем пропс
           />
         ))}
       </div>
       <div className="ShopPromo__buttonContainer">
-        <button className="ShopPromo__button">
-          <Link to="/shop">Ещё</Link>
-        </button>
+        <Link className="link" to="/shop">
+          <button className="ShopPromo__button">Ещё</button>
+        </Link>
       </div>
     </div>
   );

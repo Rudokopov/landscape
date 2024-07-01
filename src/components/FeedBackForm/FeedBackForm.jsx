@@ -77,7 +77,9 @@ function FeedBackForm() {
                 {(inputProps) => <input {...inputProps} type="tel" />}
               </InputMask>
             </div>
-            <button type="submit">Оставить заявку</button>
+            <button className="submit-button" type="submit">
+              Оставить заявку
+            </button>
           </form>
         </div>
       </div>

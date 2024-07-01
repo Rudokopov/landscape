@@ -10,7 +10,7 @@
 .card {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  margin: 50px 25px;
+  margin: 30px 25px;
   padding: 0;
   width: 350px;
   //   height: 650px;
@@ -41,6 +41,11 @@
   &__link {
     all: unset;
   }
+
+  @media (max-width: 748px) {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
 }
 
 .cardImage {
@@ -70,6 +75,17 @@ button {
   border-radius: 4px;
   margin: 15px 0 10px 8px;
   padding: 5px 10px;
+
+  &:disabled {
+    background-color: #6c6b6b;
+    color: #fff;
+    opacity: 0.4;
+
+    &:hover {
+      background-color: #6c6b6b;
+      color: #fff;
+    }
+  }
 
   &:hover {
     background-color: #19ab4a;

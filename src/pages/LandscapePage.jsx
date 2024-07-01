@@ -12,6 +12,7 @@ import greening_3 from "../images/greening_3.jpeg";
 import greening_4 from "../images/greening_4.jpeg";
 import greening_5 from "../images/greening_5.jpeg";
 import FeedBackForm from "../components/FeedBackForm/FeedBackForm";
+import { Link } from "react-router-dom";
 
 const LandscapePage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -26,6 +27,9 @@ const LandscapePage = () => {
 
   return (
     <div className="landscapePage">
+      <Link to="/" className="back-button">
+        Назад
+      </Link>
       <h1 className="landscapePage__title">Благоустройство</h1>
       <h2 className="landscapePage__description">
         <span className="bold-mark">Благоустройство территории –</span> это
