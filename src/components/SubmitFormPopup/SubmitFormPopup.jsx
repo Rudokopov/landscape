@@ -1,7 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { TotalPriceContext } from "../../contexts/TotalPriceContext";
 import "./SubmitFormPopup.scss";
+
+const apiToken = process.env.REACT_APP_TELEGRAM_APP_API_TOKEN;
 
 const SubmitFormPopup = ({ isOpen, onClose }) => {
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -19,7 +21,7 @@ const SubmitFormPopup = ({ isOpen, onClose }) => {
     };
 
     const response = await fetch(
-      "https://api.telegram.org/bot7287586582:AAHWcnhcuwL6swszWMY_GyRfsBSywFFQ6xo/sendMessage",
+      `https://api.telegram.org/bot${apiToken}/sendMessage`,
       {
         method: "POST",
         headers: {
