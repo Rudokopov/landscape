@@ -4,7 +4,22 @@ import { CardContext } from "../../contexts/CardContext";
 import "./Card.scss";
 
 function Card(props) {
-  const { image, title, price, description, onAddToCart, isInCart } = props;
+  const {
+    image,
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    title,
+    price,
+    description,
+    onAddToCart,
+    isInCart,
+  } = props;
   const { setSelectedCard } = useContext(CardContext);
 
   // Функция для обрезки описания
@@ -18,6 +33,14 @@ function Card(props) {
   const handleMoreInfo = () => {
     setSelectedCard({
       image,
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image6,
+      image7,
+      image8,
       title,
       price,
       description,

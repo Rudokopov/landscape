@@ -10,8 +10,22 @@ function CardPage() {
     return <div>Загрузка...</div>;
   }
 
-  const { image, title, price, description, onAddToCart, isInCart } =
-    selectedCard;
+  const {
+    image,
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    title,
+    price,
+    description,
+    onAddToCart,
+    isInCart,
+  } = selectedCard;
 
   return (
     <>
@@ -27,14 +41,14 @@ function CardPage() {
         <div className="card-container__examples">
           <h2>Примеры</h2>
           <div className="card-container__examples-grid">
-            <img src={image} alt="example" />
-            <img src={image} alt="example" />
-            <img src={image} alt="example" />
-            <img src={image} alt="example" />
-            <img src={image} alt="example" />
-            <img src={image} alt="example" />
-            <img src={image} alt="example" />
-            <img src={image} alt="example" />
+            <img src={image1} alt="example" />
+            <img src={image2} alt="example" />
+            <img src={image3} alt="example" />
+            <img src={image4} alt="example" />
+            <img src={image5} alt="example" />
+            <img src={image6} alt="example" />
+            <img src={image7} alt="example" />
+            <img src={image8} alt="example" />
           </div>
         </div>
         <div className="card-container__video">

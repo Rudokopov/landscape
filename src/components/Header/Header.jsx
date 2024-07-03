@@ -59,8 +59,7 @@ function Header() {
           <Link
             className="link"
             to="/"
-            onMouseDown={() => handleLinkClick("Главная")}
-            onClick={closeMenu}
+            onClick={() => handleLinkClick("Главная")}
           >
             Главная
           </Link>
@@ -69,8 +68,7 @@ function Header() {
           <Link
             className="link"
             to="/shop"
-            onMouseDown={() => handleLinkClick("Магазин")}
-            onClick={closeMenu}
+            onClick={() => handleLinkClick("Магазин")}
           >
             Магазин
           </Link>
@@ -79,8 +77,7 @@ function Header() {
           <Link
             className="link"
             to="/service"
-            onMouseDown={() => handleLinkClick("Услуги")}
-            onClick={closeMenu}
+            onClick={() => handleLinkClick("Услуги")}
           >
             Услуги
           </Link>
@@ -89,8 +86,7 @@ function Header() {
           <Link
             className="link"
             to="/cart"
-            onMouseDown={() => handleLinkClick("Корзина")}
-            onClick={closeMenu}
+            onClick={() => handleLinkClick("Корзина")}
           >
             Корзина
           </Link>

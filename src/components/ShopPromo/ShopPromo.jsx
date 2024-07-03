@@ -44,6 +44,14 @@ function ShopPromo(props) {
           <Card
             key={index}
             image={item.image}
+            image1={item.image1}
+            image2={item.image2}
+            image3={item.image3}
+            image4={item.image4}
+            image5={item.image5}
+            image6={item.image6}
+            image7={item.image7}
+            image8={item.image8}
             title={item.title}
             price={item.price}
             description={item.description}
