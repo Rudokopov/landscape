@@ -5,10 +5,13 @@ import "./ShopPromo.scss";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 
+import gazon_promo_img from "../../images/promo/gazon/gazon_sale.jpg";
+
 const ITEMS_PER_PAGE = 6;
 
 function ShopPromo(props) {
   const { data } = props;
+  const gazonData = data.find((item) => item.title === "Газон");
   const { cartItems, setCartItems } = useContext(CartContext);
   const currentItems = data.slice(0, ITEMS_PER_PAGE);
 
@@ -37,7 +40,7 @@ function ShopPromo(props) {
       <h2>Магазин</h2>
 
       <div className="ShopPromo__sale">
-        <PromoBoard />
+        <PromoBoard productData={gazonData} promoImage={gazon_promo_img} />
       </div>
       <div className="cardContainer">
         {currentItems.map((item, index) => (
@@ -52,6 +55,8 @@ function ShopPromo(props) {
             image6={item.image6}
             image7={item.image7}
             image8={item.image8}
+            background={item.background}
+            color={item.color}
             title={item.title}
             price={item.price}
             description={item.description}

@@ -1,12 +1,8 @@
 .App {
   max-width: 1440px;
-  color: #fff;
-  background: linear-gradient(
-    90deg,
-    rgba(49, 61, 59, 1) 4%,
-    rgba(94, 161, 78, 1) 75%,
-    rgba(9, 121, 28, 1) 97%
-  );
+
+  color: #111;
+  background-color: #fff;
 }
 
 .link {

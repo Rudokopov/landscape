@@ -1,15 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { CardContext } from "../../contexts/CardContext";
 import "./PromoBoard.scss";
 
-import gazon_promo_img from "../../images/promo/gazon/gazon_sale.jpg";
+function PromoBoard({ productData, promoImage }) {
+  const { setSelectedCard } = useContext(CardContext);
+  const navigate = useNavigate();
 
-function PromoBoard() {
+  const handlePromoClick = () => {
+    setSelectedCard(productData);
+    navigate(`/card/${productData.title}`);
+  };
+
   return (
-    <div className="promoBoard">
-      <Link to={`/card/Газон`}>
-        <img src={gazon_promo_img} className="promoBoard__content"></img>
-      </Link>
+    <div className="promoBoard" onClick={handlePromoClick}>
+      <img
+        src={promoImage}
+        className="promoBoard__content"
+        alt={productData.title}
+      />
     </div>
   );
 }

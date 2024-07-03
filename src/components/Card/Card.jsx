@@ -14,6 +14,8 @@ function Card(props) {
     image6,
     image7,
     image8,
+    background,
+    color,
     title,
     price,
     description,
@@ -41,6 +43,8 @@ function Card(props) {
       image6,
       image7,
       image8,
+      background,
+      color,
       title,
       price,
       description,
@@ -57,11 +61,17 @@ function Card(props) {
         <p>{price} руб.</p>
       </div>
       <p>{truncateDescription(description, 100)}</p>
-      <button onClick={onAddToCart} disabled={isInCart}>
+      <button
+        className="card__button"
+        onClick={onAddToCart}
+        disabled={isInCart}
+      >
         {isInCart ? "Уже в корзине" : "В корзину"}
       </button>
       <Link className="link" to={`/card/${title}`}>
-        <button onClick={handleMoreInfo}>Подробнее</button>
+        <button className="card__button" onClick={handleMoreInfo}>
+          Подробнее
+        </button>
       </Link>
     </div>
   );

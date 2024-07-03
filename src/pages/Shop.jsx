@@ -14,6 +14,7 @@ function Shop(props) {
 
   const handleClick = (pageNumber) => {
     setCurrentPage(pageNumber);
+    window.scrollTo(0, 0);
   };
 
   const renderPageNumbers = () => {
@@ -67,6 +68,16 @@ function Shop(props) {
           <Card
             key={index}
             image={item.image}
+            image1={item.image1}
+            image2={item.image2}
+            image3={item.image3}
+            image4={item.image4}
+            image5={item.image5}
+            image6={item.image6}
+            image7={item.image7}
+            image8={item.image8}
+            background={item.background}
+            color={item.color}
             title={item.title}
             price={item.price}
             description={item.description}

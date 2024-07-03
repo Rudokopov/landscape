@@ -54,6 +54,7 @@
   border-top-right-radius: 10px;
   width: 350px;
   height: 350px;
+  object-fit: cover;
 }
 
 p {
@@ -101,4 +102,10 @@ button {
     //   opacity: 0.2;
     // }
   }
+}
+
+.card__button {
+  background-color: #b0b0b02e;
+
+  box-shadow: none;
 }
