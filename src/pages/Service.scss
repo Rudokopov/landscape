@@ -1,4 +1,6 @@
 .service__image {
   width: 100%;
-  max-width: 1440px;
+  height: 100vh;
+  object-fit: contain;
+  // max-width: 1440px;
 }
